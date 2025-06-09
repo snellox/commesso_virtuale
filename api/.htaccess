@@ -1,0 +1,11 @@
+RewriteEngine on
+
+# Aggiungi le regole CORS
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "https://andrew02.it"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
+
+RewriteRule ^$ public/ [L]
+RewriteRule (.*) public/$1 [L]

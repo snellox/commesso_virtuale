@@ -1,0 +1,27 @@
+main.container{
+    padding: 60px 20px 0;
+}
+
+.back-btn{
+    height: 40px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.back-btn svg{
+    height: 100%;
+    display: block;
+}
+.container table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 5px 0 20px;
+}
+.container td{
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+}
+.text-right{
+    text-align: right;
+}

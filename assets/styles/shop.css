@@ -1,0 +1,167 @@
+.hero{
+    background-image: url("/assets/images/shop_hero.jpg");
+    height: 200px;
+    background-position: top center;
+    background-size: cover;
+}
+.hero .container{
+    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.hero p{
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+#discover{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+    background: var(--white);
+    padding: 7px 15px;
+    cursor: pointer;
+    transition: all .33s linear;
+}
+#discover:hover{
+    color: var(--white);
+    background: var(--main-color);
+}
+#shop{
+    max-width: 1100px;
+    margin: 2rem auto;
+    display: flex;
+    column-gap: 20px;
+    padding: 0 20px;
+}
+#filters{
+    flex-shrink: 0;
+    width: 250px;
+}
+.filtri{
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+}
+.accordion{
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+}
+.filter-title{
+    font-size: 2rem;
+    position: relative;
+    cursor: pointer;
+}
+.option{
+    list-style: none;
+    text-transform: capitalize;
+}
+label{
+    cursor: pointer;
+}
+.option input:checked ~ label{
+    font-weight: bold;
+    color: var(--main-color);
+}
+.hidden{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+input.minimize{
+    appearance: textfield;
+    border: 2px solid var(--main-color);
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 1rem;
+}
+#filters button{
+    width: calc(50% - 5px);
+    border: none;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 6px 0;
+    color: var(--white);
+    cursor: pointer;
+}
+#filters button:first-of-type{
+    margin-right: 10px;
+}
+#reset{
+    background: var(--danger);
+}
+#search{
+    background: var(--main-color);
+}
+.models{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1rem 2rem;
+}
+.model{
+    max-height: 300px;
+    aspect-ratio: 9/16;
+    width: 30%;
+    border: 1px solid #ccc;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0;
+    min-width: 155px;
+    position: relative;
+}
+.model-img{
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+.model-name{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.model-price{
+    font-size: 1.4rem;
+}
+.cart-btn{
+    position: absolute;
+    background: var(--main-color);
+    width: 40px;
+    aspect-ratio: 1/1;
+    right: 0;
+    top: 0;
+    padding: 2px 2px 4px 6px;
+    border-bottom-left-radius: 50%;
+    cursor: pointer;
+}
+.cart-btn img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+.filter-title::after{
+    content: '';
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-image:  url('/assets/images/caret.svg');
+    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all .33s linear;
+}
+.filter-title.rotate::after{
+    transform: rotateX(180deg) translateY(50%);
+}
